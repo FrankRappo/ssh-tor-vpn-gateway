@@ -1,0 +1,12 @@
+[Unit]
+Description=Tor VPN Routing Setup
+After=network.target openvpn@server.service tor.service
+Wants=openvpn@server.service tor.service
+
+[Service]
+Type=oneshot
+ExecStart=/etc/openvpn/setup-tor-routing.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

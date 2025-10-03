@@ -1,0 +1,57 @@
+# Sensitive files - NEVER commit these
+*.key
+*.crt
+*.pem
+*.ovpn
+*_password*
+*_secret*
+credentials*
+auth*
+
+# Private keys and certificates
+ca.crt
+ca.key
+server.crt
+server.key
+client*.crt
+client*.key
+dh.pem
+dh2048.pem
+ta.key
+tls-crypt.key
+tls-auth.key
+
+# Configuration files with sensitive data
+*.conf
+!*.conf.example
+
+# Logs
+*.log
+/var/log/
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Test files with real IPs/credentials
+test_*.sh
+real_*.conf
+
+# Documentation builds
+*.pdf
+*.html
+!docs/*.html

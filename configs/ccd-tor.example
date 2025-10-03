@@ -1,0 +1,8 @@
+# Client-Config-Dir file for Tor client
+# Save this as: /etc/openvpn/ccd/tor
+#
+# This assigns a fixed IP (10.8.0.100) to the client with CN=tor
+# and sets the gateway for routing
+
+ifconfig-push 10.8.0.100 255.255.255.0
+push "route-gateway 10.8.0.1"

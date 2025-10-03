@@ -1,0 +1,16 @@
+# Tor Configuration for OpenVPN Selective Routing
+# Place this content in /etc/tor/torrc
+
+# Virtual address network for Tor
+VirtualAddrNetwork 10.192.0.0/10
+
+# Auto-map hostnames to virtual addresses
+AutomapHostsOnResolve 1
+
+# DNS port for VPN clients
+# Listen on the VPN gateway IP instead of localhost
+DNSPort 10.8.0.1:5353
+
+# Transparent proxy port for VPN clients
+# Listen on the VPN gateway IP instead of localhost
+TransPort 10.8.0.1:9040
